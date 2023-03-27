@@ -386,7 +386,7 @@ app.get('/students', function(req, res) {
 
   
   //Anshuman Codes start
-
+  app.use(express.static("public"));
 
   // making route to page to generate and download pdf
   app.get('/formgenerate', function(req, res) {
@@ -395,9 +395,16 @@ app.get('/students', function(req, res) {
   app.get('/adminlogin', function(req, res) {
     res.render('adminlogin',{ message: req.flash('error') });
   });
+  app.get('/studentlogin', function(req, res) {
+    res.render('studentlogin',{ message: req.flash('error') });
+  });
   app.get('/excelupload', (req, res) => {
     res.render('excelupload');
   });
+  // app.get('/', function(req, res) {
+  //   res.render('/clearence-system-main/images/college.png');
+  // });
+  
 
   app.use(fileUpload());
 

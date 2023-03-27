@@ -102,7 +102,7 @@ CREATE TABLE `students` (
 --
 
 INSERT INTO `students` (`id`, `rno`, `name`, `batch`, `semester`, `department`, `section`, `library`, `canteen`, `sports`) VALUES
-(1, '201', 'anshuman', '[value-4]', '[value-5]', '[value-6]', '[value-7]', 1, 1, 11);
+(1, '201', 'anshuman', '[value-4]', '[value-5]', '[value-[value-6]', '7]', 1, 1, 11);
 
 -- --------------------------------------------------------
 
