@@ -116,7 +116,6 @@ app.post('/login', function(req, res, next) {
               return next(err);
           }
           
-
           req.session.username = req.user.username ;
 
           res.redirect('/filter');
@@ -145,7 +144,7 @@ app.get('/logout', function(req, res) {
 
 
 
-
+//branch , course , semester ,session, year
 app.get('/filter', function(req, res) {
   const userId = req.user;
 // console.log(userId);
