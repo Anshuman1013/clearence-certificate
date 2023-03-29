@@ -137,11 +137,11 @@
                                 </td>
                                 <td>
                                   <% if (student.library || student.canteen || student.sports) { %>
-                                    <form action="/students/<%= student.rno %>/unverify" method="POST">
+                                    <form action="/students/<%= student.rno %>/unverify" method="POST" onsubmit="return confirm('Are you sure you want to verify this student?')">
                                       <button type="submit" class="btn btn-danger btn-sm">Unverify</button>
                                     </form>
                                   <% } else { %>
-                                    <form action="/students/<%= student.rno %>/verify" method="POST">
+                                    <form action="/students/<%= student.rno %>/verify" method="POST" onSubmit = "return confirm('Are you sure you want to unverify this student?')">
                                       <button type="submit" class="btn btn-success btn-sm">Verify</button>
                                     </form>
                                   <% } %>
