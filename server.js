@@ -126,6 +126,8 @@ app.post('/login', function(req, res, next) {
 
 
 
+
+
 app.get('/logout', function(req, res) {
   req.session.destroy(function(err) {
     if (err) {
@@ -400,6 +402,9 @@ app.get('/students', function(req, res) {
   app.get('/excelupload', (req, res) => {
     res.render('excelupload');
   });
+  app.get('/studentupdate', (req, res) => {
+    res.render('studentupdate');
+  });
   // app.get('/', function(req, res) {
   //   res.render('/clearence-system-main/images/college.png');
   // });
@@ -448,6 +453,29 @@ app.get('/students', function(req, res) {
       });
     });
   });
+
+
+  app.post('/adminexcelredirect', function(req, res, next) {
+  
+    // Need to make authentication currently redirecting after adminlogin to excelupload
+              res.redirect('/excelupload');
+       
+    });
+
+
+
+    app.post('/studentredirecttostudentupdatepage', function(req, res, next) {
+      
+      // Need to make authentication currently redirecting after studentlogin to student update page
+                res.redirect('/studentupdate');
+         
+      });
+      app.post('/status', function(req, res, next) {
+      
+        // Need to make verification checks currently redirecting to form generate from view status
+                  res.redirect('/formgenerate');
+           
+        });
 
   // app.get('/images/logo.png', function(req, res) {
   //   res.render('logo.png');
